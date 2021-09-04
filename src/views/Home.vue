@@ -1,18 +1,24 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div class="home">
+        <button @click="handler">click me to test fetch</button>
+        <div v-if="loadComplete"> {{t('message')}} </div>
+    </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+<script setup>
+import { useI18n } from 'vue-i18n'
+import { reactive, ref, inject } from 'vue'
+const { t } = useI18n()
+const axios = inject('axios')
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+const loadComplete = ref(false)
+
+const handler = async () => {
+    try {
+        await axios.get('https://my-hub-backend.herokuapp.com/users')
+        loadComplete.value = true
+    } catch (err) {}
 }
 </script>
+
+<style></style>
