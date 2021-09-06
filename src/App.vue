@@ -1,9 +1,10 @@
 <template>
-    <Home/>
+    <app-header/>
+    <router-view/>
 </template>
 
 <script setup>
-import Home from '@/views/Home'
+import AppHeader from '@/components/header/Header'
 </script>
 
 <style lang="scss">
@@ -12,6 +13,6 @@ html, body, #app {
     height:100%;
     overflow:hidden;
     background: white;
-    font-family: 'Alegreya', serif;
+    font-family: 'Nunito', sans-serif;
 }
 </style>
