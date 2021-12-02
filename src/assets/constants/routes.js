@@ -1,3 +1,5 @@
 export const ROUTES = {
-    HOME: '/'
+    HOME: '/',
+    ADVENT_CALENDAR: '/AdventCalendar',
+    DAY_DISPLAYER: 'day/:day'
 }
