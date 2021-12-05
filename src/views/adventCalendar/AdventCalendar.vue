@@ -20,4 +20,9 @@ const daysList = computed(() => {
 </script>
 
 <style lang="scss">
+.advent-calendar-wrapper {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+}
 </style>

@@ -1,13 +1,14 @@
 <template>
-    <h1> Day displayer {{day}}</h1>
+    <day-info :day="day"/>
 </template>
 
 <script setup>
-    import { defineProps } from 'vue'
+import DayInfo from '@/components/adventCalendar/support/DayInfo'
+import { defineProps } from 'vue'
 
-    const props = defineProps({
-        day: [String, Number]
-    })
+const props = defineProps({
+    day: [String, Number]
+})
 </script>
 
 <style></style>
