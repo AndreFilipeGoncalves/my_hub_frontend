@@ -13,7 +13,7 @@ const loadComplete = ref(false)
 
 const handler = async () => {
     try {
-        await axios.get('https://my-hub-backend.herokuapp.com/users')
+        await axios.get('https://my-hub-backend.herokuapp.com/testeCookie')
         loadComplete.value = true
     } catch (err) {}
 }

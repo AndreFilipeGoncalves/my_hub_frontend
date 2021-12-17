@@ -1,38 +1,16 @@
 <template>
     <div class="content-wrapper">
-        <!-- <img :src="require('@/assets/images/3622.jpg')" alt=""> -->
+        <example></example>
+        <img :src="require('@/assets/images/3622.jpg')" alt="">
 
-        <h1> QUERES NAMORAR COMIGO MY </h1>
-        <img :src="require('@/assets/images/love.png')" alt="">
-        <div class="wrappers">
-            <div class="wrapper">
-                <input type="radio" id="huey" name="drone" value="huey">
-                <label for="huey">SIM</label>
-            </div>
-
-            <div class="wrapper">
-                <input type="radio" id="dewey" name="drone" value="dewey">
-                <label for="dewey">Não</label>
-            </div>
-        </div>
-
-        <button @click="clickedHandler">SUBMIT</button>
-        <!-- <a href="http://www.freepik.com">Designed by macrovector / Freepik</a> -->
-        <!-- <h1 class="content-description"> description </h1>
-        <div class="cards-wrapper"> cards </div> -->
+        <a href="http://www.freepik.com">Designed by macrovector / Freepik</a>
+        <h1 class="content-description"> description </h1>
+        <div class="cards-wrapper"> cards </div>
     </div>
 </template>
 
 <script setup>
-
-const clickedHandler = () => {
-    if (document.getElementById('huey').checked) {
-        alert('LOVE YOU TOO')
-    } else {
-        alert('LAMENTO, TOO LATE, TRY SELECTING YES')
-    }
-}
-
+import Example from '@/components/example'
 </script>
 
 <style lang="scss">
